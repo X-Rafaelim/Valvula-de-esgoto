@@ -6,11 +6,12 @@ int main(){
     float entrada;
     float saida;
     float soma;
-    float somaA;
+    float soma2;
+
     float capacidade10 = 100;
 
     printf("Diga a quantidade a entrada\n");
-    scanf(" %d", &entrada);
+    scanf(" %f", &entrada);
     printf("diga o nivel da agua do reservatorio A\n");
     scanf(" %f", &a);
     printf("Diga o nivel da agua do reservatorio B\n");
@@ -18,21 +19,18 @@ int main(){
     printf("Diga a quantidae da saida\n");
     scanf(" %f", &saida);
 
-    float primeiroIfSaida = saida;
-    float primeiroIfEntrada = entrada;
-    float primeiroIfA = a;
-    float primeiroIfB = b;
+    if (entrada >= 50 || entrada < 0 && saida >=30 || entrada < 0 && a >= 1000 || entrada < 0 && b >= 1000 || entrada < 0)
+    {
+        main();
+    }
+    
+
+    soma = b * 0.25;
+    soma2 = a - soma;
 
 
 
 
-
-
-
-
-
-    soma = a * 0.25;
-    somaA = a - soma;
 
     if (saida < entrada  && a >= b)
     {
@@ -54,7 +52,7 @@ int main(){
         printf("Valvula abre 10%%\n");
         printf("3");
     }
-    else if (saida >= entrada &&  somaA < b)
+    else if (saida >= entrada &&  soma2 < b)
     {
         printf("Abrir valvula 50%%\n");
         printf("3");
